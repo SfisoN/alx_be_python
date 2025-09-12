@@ -1,4 +1,4 @@
-curent = int(input("How old are you?: "))
+curent = input("How old are you?: ")
 
 age = curent + 27
 
