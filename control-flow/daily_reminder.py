@@ -17,4 +17,5 @@ match priority:
 if time_bound == "yes":
     reminder += " That requires immediate attention today!."
 
-print(reminder)
+print(f"Reminder: '{task}' is a {priority} priority task"
+      f"{' That requires immediate attention today!' if time_bound == 'yes' else ''}")
