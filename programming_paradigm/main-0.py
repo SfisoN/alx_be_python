@@ -17,7 +17,7 @@ def main():
         print(f"Deposited: ${amount}")
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
-            print(f"Withdrew: ${amount}")
+            print(f"Withdrew: ${amount:.1f}")
         else:
             print("Insufficient funds.")
     elif command == "display":
