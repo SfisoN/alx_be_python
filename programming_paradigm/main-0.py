@@ -6,20 +6,19 @@ def main():
 
     if len(sys.argv) < 2:
         print("Usage: python main-0.py <deposit|withdraw|balance> [amount]")
-        print("Commands: deposit, withdraw, display")
         sys.exit(1)
 
-    command, *params = sys.argv[1].split(':') 
-    amount = float(params[0]) if params else 0.0
+    command, *params = sys.argv[1].lower() 
+    amount = float(sys.argv[2]) if len(sys.argv) > 2 else 0.0
 
     if command == "deposit" and amount is not None:
         account.deposit(amount)
-        print(f"Deposited: ${amount}")
+        print(f"Deposited: ${amount:.2f}")
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
-            print(f"Withdrew: ${amount:.1f}")
+            print(f"Withdrew: ${amount:.2f}")
         else:
-            print(f"Withdrew: ${amount:.1f}")
+            print(f"Insfficient funds")
     elif command == "display":
         account.display_balance()
     else:
