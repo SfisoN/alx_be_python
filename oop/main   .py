@@ -4,7 +4,7 @@ def main():
     sum_result = Calculator.add(5, 10)
     print(f"The sum is: {sum_result}")
 
-    product_result = Calculator.multiplyy(5, 10)
+    product_result = Calculator.multiply(5, 10)
     print(f"The product is: {product_result}")
 
 if __name__ == "__main__":
