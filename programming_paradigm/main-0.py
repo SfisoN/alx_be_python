@@ -2,7 +2,7 @@ import sys
 from bank_account import BankAccount
 
 def main():
-    account = BankAccount(100.0)
+    account = BankAccount(50.0)
 
     if len(sys.argv) < 2:
         print("Usage: python main-0.py <deposit|withdraw|balance> [amount]")
